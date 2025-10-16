@@ -78,15 +78,27 @@ body {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 0;
   z-index: 1;
   transform: translateY(-50%);
-  transition: all 0.3s ease;
+  transition: left 0.3s ease;
 }
 
 .light #switch button {
-  left: 0;
-  right: initial;
+  left: 50%;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
